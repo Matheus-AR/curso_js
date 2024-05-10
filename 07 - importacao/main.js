@@ -1,18 +1,14 @@
 const { gets, print } = require('./funcoes-auxiliares');
 
+const quantidadeDeAlunos = gets();
+let maiorValorEncontrado = 0;
 
-const numerosSorteados = [];
-for (let i=0; i<5; i++) {
+for (let i=0; i<quantidadeDeAlunos; i++) {
     const numerosSorteado = gets();
-    numerosSorteados.push(numerosSorteado);
-}
-
-let maiorValor = 0;
-for (let i=0; i<numerosSorteados.length; i++) {
-    const numerosSorteado = numerosSorteados[i];
-    if (numerosSorteado > maiorValor) {
-        maiorValor = numerosSorteado;
+    if (numerosSorteado > maiorValorEncontrado) {
+        maiorValorEncontrado = numerosSorteado;
     }
 }
 
-print(maiorValor);
+
+print(maiorValorEncontrado);
